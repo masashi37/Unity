@@ -16,10 +16,12 @@ public class OthelloTableView : MonoBehaviour
         }
     }
 
-    const float _sellInterval = 1.05f;
+    const float _cellInterval = 1.05f;
 
     const int _xLength = 8;
+    public int GetXLength { get { return _xLength; } }
     const int _zLength = 8;
+    public int GetZLength { get { return _zLength; } }
 
 
     [SerializeField]
@@ -47,13 +49,17 @@ public class OthelloTableView : MonoBehaviour
     }
 
     int _selectX = 0;
+    public int GetSelectX { get { return _selectX; } }
     int _selectZ = 0;
+    public int GetSelectZ { get { return _selectZ; } }
 
     GameObject[,] _cellNumber =
         new GameObject[_zLength, _xLength];
 
+    public GameObject[,] CellNumber { get { return _cellNumber; } }
+
     //---------------------------------------------------------
-    
+
     void Start()
     {
         for (var z = 0; z < _zLength; ++z)
@@ -67,7 +73,7 @@ public class OthelloTableView : MonoBehaviour
                 _cellNumber[z, x].transform.parent = transform;
 
                 _cellNumber[z, x].transform.localPosition =
-                    new Vector3((_sellInterval * x), 0, (_sellInterval * z));
+                    new Vector3((_cellInterval * x), 0, (_cellInterval * z));
             }
         }
         _cellNumber[0, 0].GetComponent<Renderer>().material = SelectedMaterial;

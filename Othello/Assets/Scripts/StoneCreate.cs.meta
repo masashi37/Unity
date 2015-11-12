@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: cb96f1e20dcc62941a3e21631c003a9c
+timeCreated: 1446717635
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - _stonePrefab: {fileID: 133606, guid: 1b7f9dfe3c3f9a444b816bf9a30ac721, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
